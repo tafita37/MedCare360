@@ -1,0 +1,112 @@
+<odoo>
+    <data noupdate="0">
+        <!-- Partners for users -->
+        <record id="partner_nurse_1" model="res.partner">
+            <field name="name">Alice Nurse</field>
+        </record>
+        <record id="partner_nurse_2" model="res.partner">
+            <field name="name">Bob Nurse</field>
+        </record>
+        <record id="partner_nurse_3" model="res.partner">
+            <field name="name">Carol Nurse</field>
+        </record>
+
+        <record id="partner_doctor_1" model="res.partner">
+            <field name="name">David Doctor</field>
+        </record>
+        <record id="partner_doctor_2" model="res.partner">
+            <field name="name">Eva Doctor</field>
+        </record>
+        <record id="partner_doctor_3" model="res.partner">
+            <field name="name">Frank Doctor</field>
+        </record>
+
+        <record id="partner_patient_1" model="res.partner">
+            <field name="name">Grace Patient</field>
+        </record>
+        <record id="partner_patient_2" model="res.partner">
+            <field name="name">Henry Patient</field>
+        </record>
+        <record id="partner_patient_3" model="res.partner">
+            <field name="name">Ivy Patient</field>
+        </record>
+
+        <!-- Users for Nurses -->
+        <record id="user_nurse_1" model="res.users">
+            <field name="name">Alice Nurse</field>
+            <field name="login">alice.nurse@gmail.com</field>
+            <field name="password">0000</field>
+            <field name="partner_id" ref="partner_nurse_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user')), (4, ref('group_nurse'))]"/>
+        </record>
+        <record id="user_nurse_2" model="res.users">
+            <field name="name">Bob Nurse</field>
+            <field name="login">bob.nurse@gmail.com</field>
+            <field name="password">0000</field>
+            <field name="partner_id" ref="partner_nurse_2"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user')), (4, ref('group_nurse'))]"/>
+        </record>
+        <record id="user_nurse_3" model="res.users">
+            <field name="name">Carol Nurse</field>
+            <field name="login">carol.nurse@gmail.com</field>
+            <field name="password">0000</field>
+            <field name="partner_id" ref="partner_nurse_3"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user')), (4, ref('group_nurse'))]"/>
+        </record>
+
+        <!-- Users for Doctors -->
+        <record id="user_doctor_1" model="res.users">
+            <field name="name">David Doctor</field>
+            <field name="login">david.doctor@gmail.com</field>
+            <field name="password">0000</field>
+            <field name="partner_id" ref="partner_doctor_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user')), (4, ref('group_doctor'))]"/>
+        </record>
+        <record id="user_doctor_2" model="res.users">
+            <field name="name">Eva Doctor</field>
+            <field name="login">eva.doctor@gmail.com</field>
+            <field name="password">0000</field>
+            <field name="partner_id" ref="partner_doctor_2"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user')), (4, ref('group_doctor'))]"/>
+        </record>
+        <record id="user_doctor_3" model="res.users">
+            <field name="name">Frank Doctor</field>
+            <field name="login">frank.doctor@gmail.com</field>
+            <field name="password">0000</field>
+            <field name="partner_id" ref="partner_doctor_3"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user')), (4, ref('group_doctor'))]"/>
+        </record>
+
+        <!-- Users for Patients -->
+        <record id="user_patient_1" model="res.users">
+            <field name="name">Grace Patient</field>
+            <field name="login">grace.patient@gmail.com</field>
+            <field name="password">0000</field>
+            <field name="partner_id" ref="partner_patient_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user')), (4, ref('group_patient'))]"/>
+        </record>
+        <record id="user_patient_2" model="res.users">
+            <field name="name">Henry Patient</field>
+            <field name="login">henry.patient@gmail.com</field>
+            <field name="password">0000</field>
+            <field name="partner_id" ref="partner_patient_2"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user')), (4, ref('group_patient'))]"/>
+        </record>
+        <record id="user_patient_3" model="res.users">
+            <field name="name">Ivy Patient</field>
+            <field name="login">ivy.patient@gmail.com</field>
+            <field name="password">0000</field>
+            <field name="partner_id" ref="partner_patient_3"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user')), (4, ref('group_patient'))]"/>
+        </record>
+    </data>
+</odoo>
