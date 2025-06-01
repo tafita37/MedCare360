@@ -1,0 +1,17 @@
+<odoo>
+    <menuitem id="hospital_menu_root" name="Hospital">
+        <menuitem id="hospital_menu_disease" name="Diseases" sequence="10">
+            <menuitem 
+                id="hospital_menu_disease_list" 
+                name="Diseases" 
+                action="action_hospital_disease"
+            />
+        </menuitem>
+        <menuitem 
+            id="hospital_menu_user_list" 
+            name="Users" 
+            action="base.action_res_users" 
+            sequence="20"
+        />
+    </menuitem>
+</odoo>
