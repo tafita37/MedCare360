@@ -12,7 +12,7 @@ class HospitalDiseaseSymptomRel(models.Model):
         ),
     ]
 
-    name = fields.Char(string='Name', required=True, unique=True)
+    # name = fields.Char(string='Name', required=True, unique=True)
     disease_id = fields.Many2one('hospital.disease', string="Disease", required=True)
     symptom_id = fields.Many2one('hospital.symptom', string="Symptom", required=True)
     severity_level_id = fields.Many2one('hospital.severity.level', string="Severity Level", required=True)

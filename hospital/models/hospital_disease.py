@@ -9,3 +9,4 @@ class HospitalDisease(models.Model):
     disease_type_id = fields.Many2one('hospital.disease.type', string="Disease Type", required=True)
     description = fields.Text(string="Disease description", required=True, unique=True)
     is_contagious=fields.Boolean(string='Contagious ?', default=False, required=True)
+    disease_symptom_id=fields.One2many('hospital.disease.symptom.rel', 'disease_id', string='Symptoms')
