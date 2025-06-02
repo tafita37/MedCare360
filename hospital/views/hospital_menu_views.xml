@@ -5,11 +5,19 @@
                 id="hospital_menu_disease_type_list" 
                 name="Diseases Types" 
                 action="action_hospital_disease_type"
+                sequence="10"
             />
             <menuitem 
                 id="hospital_menu_disease_list" 
                 name="Diseases" 
                 action="action_hospital_disease"
+                sequence="20"
+            />
+            <menuitem 
+                id="hospital_menu_product_list" 
+                name="Medications" 
+                action="action_product_template"
+                sequence="30"
             />
         </menuitem>
         <menuitem 

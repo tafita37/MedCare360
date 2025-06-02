@@ -1,0 +1,54 @@
+<odoo>
+    <data noupdate="0">
+        <record id="efficiency_level_1" model="hospital.efficiency.level">
+            <field name="level">10</field>
+            <field name="name">Very Low</field>
+            <field name="description">Very low efficiency, insufficient performance</field>
+        </record>
+        <record id="efficiency_level_2" model="hospital.efficiency.level">
+            <field name="level">20</field>
+            <field name="name">Low</field>
+            <field name="description">Low efficiency, significant room for improvement</field>
+        </record>
+        <record id="efficiency_level_3" model="hospital.efficiency.level">
+            <field name="level">30</field>
+            <field name="name">Below Average</field>
+            <field name="description">Efficiency below expected average</field>
+        </record>
+        <record id="efficiency_level_4" model="hospital.efficiency.level">
+            <field name="level">40</field>
+            <field name="name">Average</field>
+            <field name="description">Average efficiency, acceptable results</field>
+        </record>
+        <record id="efficiency_level_5" model="hospital.efficiency.level">
+            <field name="level">50</field>
+            <field name="name">Moderate</field>
+            <field name="description">Moderate efficiency, most objectives met</field>
+        </record>
+        <record id="efficiency_level_6" model="hospital.efficiency.level">
+            <field name="level">60</field>
+            <field name="name">Good</field>
+            <field name="description">Good efficiency, solid performance </field>
+        </record>
+        <record id="efficiency_level_7" model="hospital.efficiency.level">
+            <field name="level">70</field>
+            <field name="name">Very Good</field>
+            <field name="description">Very good efficiency, above average results</field>
+        </record>
+        <record id="efficiency_level_8" model="hospital.efficiency.level">
+            <field name="level">80</field>
+            <field name="name">High</field>
+            <field name="description">High efficiency, remarkable results</field>
+        </record>
+        <record id="efficiency_level_9" model="hospital.efficiency.level">
+            <field name="level">90</field>
+            <field name="name">Excellent</field>
+            <field name="description">Excellent performance, near optimal</field>
+        </record>
+        <record id="efficiency_level_10" model="hospital.efficiency.level">
+            <field name="level">100</field>
+            <field name="name">Max</field>
+            <field name="description">Maximum efficiency, perfect result</field>
+        </record>
+    </data>
+</odoo>
