@@ -8,6 +8,7 @@
                 Create your first disease
             </p>
         </field>
+        <field name="context">{'default_disease_id': active_id}</field>
     </record>
 
     <record id="form_hospital_disease" model="ir.ui.view">
@@ -55,6 +56,7 @@
             <form string="Symptomes">
                 <sheet>
                     <group>
+                        <field name="disease_id" invisible="1"/>
                         <field name="symptom_id"/>
                         <field name="severity_level_id"/>
                     </group>

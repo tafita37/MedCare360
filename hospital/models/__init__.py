@@ -4,11 +4,11 @@ from . import hospital_disease_type
 from . import hospital_disease
 from . import hospital_doctor
 from . import hospital_efficiency_level
-from . import hospital_medication
+from . import product_template
 from . import hospital_nurse
 from . import hospital_patient
 from . import hospital_partners
 from . import hospital_severity_level
-from . import hospital_symptom_medication_rel
+from . import hospital_symptom_product_rel
 from . import hospital_symptom
 from . import hospital_users
