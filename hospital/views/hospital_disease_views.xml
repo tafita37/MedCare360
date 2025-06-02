@@ -9,4 +9,57 @@
             </p>
         </field>
     </record>
+
+    <record id="form_hospital_disease" model="ir.ui.view">
+        <field name="name">hospital.disease.form</field>
+        <field name="model">hospital.disease</field>
+        <field name="arch" type="xml">
+            <form string="Disease">
+                <header> 
+                    <!-- <field name="state" widget="statusbar" statusbar_visible="nouveau,recu,acceptee,vendue"/> -->
+                </header>
+                <sheet>
+                    <!-- <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active"/> -->
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="disease_type_id"/>
+                            <field name="description"/>
+                            <field name="is_contagious"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Symptoms">
+                            <group>
+                                <field name="disease_symptom_id">
+                                    <list>
+                                        <field name="symptom_id"/>
+                                        <field name="severity_level_id"/>
+                                    </list>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="form_hospital_disease_symptom_rel" model="ir.ui.view">
+        <field name="name">hospital.disease.symptom.rel.form</field>
+        <field name="model">hospital.disease.symptom.rel</field>
+        <field name="arch" type="xml">
+            <form string="Symptomes">
+                <sheet>
+                    <group>
+                        <field name="symptom_id"/>
+                        <field name="severity_level_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 </odoo>
