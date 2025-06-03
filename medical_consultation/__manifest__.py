@@ -1,0 +1,15 @@
+{
+    'name': 'medical_consultation',
+    'version': '1.0',
+    'depends': ['hospital'],
+    'data': [
+        'security/ir.model.access.csv',  
+        
+        # 'views/hospital_menu_views.xml'
+    ],
+    'author': 'Moi',
+    'category': 'Uncategorized',
+    'description': 'The Medical Consultation module extends the hospital management system by providing a comprehensive and user-friendly platform for managing patient consultations. It enables patients to schedule appointments, receive detailed medical diagnoses, and access follow-up care instructions. Integrated with the core hospital module, it streamlines the consultation process for healthcare professionals, ensuring accurate record-keeping and efficient service delivery.',
+    'installable': True,
+    'application': True,
+}

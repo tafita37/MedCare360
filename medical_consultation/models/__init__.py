@@ -1,0 +1,6 @@
+from . import medical_consultation_consultation
+from . import medical_consultation_diagnosis_advice
+from . import medical_consultation_diagnosis_detail
+from . import medical_consultation_diagnosis
+from . import medical_consultation_request_detail
+from . import medical_consultation_request
