@@ -13,14 +13,32 @@ MedCare360 aims to provide an integrated and modular healthcare platform to impr
 ## 2. Features
 
 ### ✅ Features list
-<!--
-- User authentication (login, registration, logout)
-- Interactive dashboard
-- CRUD operations for managing data
-- Export data in CSV/PDF formats
-- Mobile-responsive interface
-- Real-time notifications
--->
+
+- Manager side:
+    - CRUD for Disease Type
+    - CRUD for Disease
+    - CRUD for Symptom
+    - CRUD for Medication
+    - List of patients held on site
+    - List of requests + assignment to a nurse
+    - List of nurses with the number of requests each needs to handle
+- Patient side:
+    - Request form
+    - View their status
+- Doctor side:
+    - Prescription form + final action
+    - List of medication recommendations during treatment
+    - View records with the same symptom as a disease
+    - Final action
+    - List of consultations
+    - Export patient record to PDF
+- Nurse side:
+    - List of requests + assignment to a doctor to create a consultation
+    - Daily and weekly rounds (filter: done/to be done)
+    - Create a round
+    - Click on a round to release a patient or reschedule it and change the status
+    - Export weekly round report to PDF
+
 
 ---
 
