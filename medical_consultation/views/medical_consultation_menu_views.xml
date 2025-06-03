@@ -1,0 +1,10 @@
+<odoo>
+    <menuitem id="medical_consultation_menu_root" name="Medical Consultation">
+        <menuitem 
+            id="medical_consultation_menu_request_list" 
+            name="Request" 
+            action="action_medical_consultation_request"
+            sequence="10"
+        />
+    </menuitem>
+</odoo>

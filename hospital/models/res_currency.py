@@ -1,4 +1,4 @@
 from odoo import models, fields
 
-class HospitalCurrency(models.Model):
+class ResCurrency(models.Model):
     _inherit = 'res.currency'

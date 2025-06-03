@@ -1,7 +1,7 @@
 from odoo import models, fields
 
 class MedicalConsultationRequestDetail(models.Model):
-    _name = 'medical.consultation.request.detail'
+    _name = 'medical.consultation.request.symptom.rel'
     _description = 'Medical Consultation Request Detail'
 
     request_id = fields.Many2one('medical.consultation.request', string='Request', required=True)

@@ -1,4 +1,4 @@
 from odoo import models
 
-class HospitalPartner(models.Model):
+class ResPartner(models.Model):
     _inherit = 'res.partner'
