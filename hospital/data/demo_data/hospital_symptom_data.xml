@@ -1,0 +1,30 @@
+<odoo>
+    <data noupdate="0">
+
+        <record id="hospital_symptom_headache" model="hospital.symptom">
+            <field name="name">Headache</field>
+            <field name="description">A continuous pain in the head that can vary in intensity.</field>
+        </record>
+
+        <record id="hospital_symptom_fever" model="hospital.symptom">
+            <field name="name">Fever</field>
+            <field name="description">An abnormally high body temperature, usually accompanied by shivering, headache, and malaise.</field>
+        </record>
+
+        <record id="hospital_symptom_cough" model="hospital.symptom">
+            <field name="name">Cough</field>
+            <field name="description">A sudden expulsion of air from the lungs, usually to clear the airways.</field>
+        </record>
+
+        <record id="hospital_symptom_fatigue" model="hospital.symptom">
+            <field name="name">Fatigue</field>
+            <field name="description">Extreme tiredness resulting from mental or physical exertion or illness.</field>
+        </record>
+
+        <record id="hospital_symptom_shortness_of_breath" model="hospital.symptom">
+            <field name="name">Shortness of Breath</field>
+            <field name="description">A feeling of not being able to breathe well enough.</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,6 +1,6 @@
 from odoo import models, api
 
-class HospitalUsers(models.Model):
+class ResUsers(models.Model):
     _inherit = 'res.users'
 
     def _create_related_hospital_records(self):

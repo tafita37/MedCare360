@@ -3,9 +3,10 @@
     'version': '1.0',
     'depends': ['hospital'],
     'data': [
-        'security/ir.model.access.csv',  
-        
-        # 'views/hospital_menu_views.xml'
+        'security/ir.model.access.csv',
+          
+        'views/medical_consultation_request_views.xml',
+        'views/medical_consultation_menu_views.xml',
     ],
     'author': 'Moi',
     'category': 'Uncategorized',
