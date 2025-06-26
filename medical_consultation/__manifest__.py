@@ -7,6 +7,8 @@
           
         'views/medical_consultation_request_views.xml',
         'views/medical_consultation_menu_views.xml',
+
+        'wizard/medical_consultation_affectation_nurse_wizard_views.xml',
     ],
     'author': 'Moi',
     'category': 'Uncategorized',

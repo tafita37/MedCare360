@@ -1,0 +1,1 @@
+from . import medical_consultation_affectation_nurse_wizard

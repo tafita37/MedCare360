@@ -15,7 +15,7 @@ class MedicalConsultationRequest(models.Model):
         'request_id',
         string='Symptoms',
         required=True
-    )
+    )    
 
     @api.model
     def _get_default_patient(self):
@@ -37,3 +37,16 @@ class MedicalConsultationRequest(models.Model):
         if record.request_detail_ids is None or len(record.request_detail_ids)==0 :
             raise UserError(_("You must add at least one symptom to the request."))
         return record
+
+    def open_affectation_wizard(self):
+        self.ensure_one()
+        return {
+            'name': 'Affectation',
+            'type': 'ir.actions.act_window',
+            'res_model': 'medical.consultation.affectation.nurse.wizard',
+            'view_mode': 'form',
+            'target': 'new',  
+            'context': {
+                'default_request_id': self.id,
+            },
+        }
