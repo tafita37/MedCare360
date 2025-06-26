@@ -1,0 +1,21 @@
+<odoo>
+    <record id="view_affectation_wizard_form" model="ir.ui.view">
+        <field name="name">medical.consultation.affectation.nurse.wizard.form</field>
+        <field name="model">medical.consultation.affectation.nurse.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Affecter une infirmière">
+                <group>
+                    <field name="request_id"/>
+                    <field name="nurse_id"/>
+                </group>
+                <footer>
+                    <button string="Affecter"
+                            type="object"
+                            name="action_confirm_affectation"
+                            class="btn-primary"/>
+                    <button string="Annuler" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

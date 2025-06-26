@@ -3,9 +3,18 @@
         <field name="name">medical.consultation.request.list</field>
         <field name="model">medical.consultation.request</field>
         <field name="arch" type="xml">
-            <list string="Requestdsds">
+            <list string="Request">
                 <field name="name"/>
                 <field name="nurse_id"/>
+                <button 
+                    groups="base.group_system" 
+                    name="open_affectation_wizard" 
+                    string="Affecter" 
+                    type="object" 
+                    class="btn-primary" 
+                    icon="fa-user-plus"
+                    invisible="nurse_id != False"
+                />
             </list>
         </field>
     </record>
