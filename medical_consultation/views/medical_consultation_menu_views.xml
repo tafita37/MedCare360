@@ -6,5 +6,18 @@
             action="action_medical_consultation_request"
             sequence="10"
         />
+        <menuitem 
+            id="medical_consultation_menu_partner_list" 
+            sequence="20"
+            name="Employees" 
+        >
+            <menuitem 
+                id="medical_consultation_menu_nurse_list" 
+                name="Nurse" 
+                action="action_medical_consultation_nurse"
+                groups="base.group_system"  
+                sequence="10"
+            />
+        </menuitem>
     </menuitem>
 </odoo>

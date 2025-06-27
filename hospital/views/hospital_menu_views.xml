@@ -31,6 +31,7 @@
             name="Users" 
             action="base.action_res_users" 
             sequence="30"
+            groups="base.group_system" 
         />
     </menuitem>
 </odoo>
