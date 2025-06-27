@@ -4,7 +4,7 @@
     'depends': ['sale'],
     'data': [
         'data/master_data/res_groups_data.xml',  
-        'data/demo_data/res_users_data.xml',  
+        'data/master_data/res_users_data.xml',  
         'data/demo_data/hospital_severity_level_data.xml',  
         'data/demo_data/hospital_efficiency_level_data.xml',  
         'data/demo_data/hospital_symptom_data.xml',  
