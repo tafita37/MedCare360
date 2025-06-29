@@ -1,5 +1,6 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError
+from odoo import SUPERUSER_ID
 
 class MedicalConsultationRequest(models.Model):
     _name = 'medical.consultation.request'
@@ -50,3 +51,24 @@ class MedicalConsultationRequest(models.Model):
                 'default_request_id': self.id,
             },
         }
+
+    @api.model
+    def search(self, args, offset=0, limit=None, order=None, count=False):
+        user = self.env.user
+        if self.env.is_superuser():
+            return super().search(args, offset=offset, limit=limit, order=order, count=count)
+        # Si l'utilisateur est infirmier
+        if user.has_group('hospital.group_nurse'):
+            nurse = self.env['hospital.nurse'].search([('user_id', '=', user.id)], limit=1)
+            if nurse:
+                args = args + [('nurse_id', '=', nurse.id)]
+            else:
+                args = args + [('nurse_id', '=', False)]  # Aucun résultat si pas d'infirmier lié
+        # Si l'utilisateur est patient
+        elif user.has_group('hospital.group_patient'):
+            patient = self.env['hospital.patient'].search([('user_id', '=', user.id)], limit=1)
+            if patient:
+                args = args + [('patient_id', '=', patient.id)]
+            else:
+                args = args + [('patient_id', '=', False)]  # Aucun résultat si pas de patient lié
+        return super().search(args, offset=offset, limit=limit, order=order, count=count)

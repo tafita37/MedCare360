@@ -6,6 +6,7 @@
             <list string="Request">
                 <field name="name"/>
                 <field name="nurse_id"/>
+                <field name="patient_id"/>
                 <button 
                     groups="base.group_system" 
                     name="open_affectation_wizard" 
