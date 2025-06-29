@@ -3,6 +3,7 @@
     'version': '1.0',
     'depends': ['hospital'],
     'data': [
+        'security/medical_consultation_security.xml',
         'security/ir.model.access.csv',
           
         'views/medical_consultation_request_views.xml',

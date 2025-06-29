@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record id="medical_consultation_request_rule_patient" model="ir.rule">
+            <field name="name">Patient: only see own consultation requests</field>
+            <field name="model_id" ref="model_medical_consultation_request"/>
+            <field name="domain_force">[('patient_id.user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('hospital.group_patient'))]"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="medical_consultation_request_rule_nurse" model="ir.rule">
+            <field name="name">Nurse: only see own assigned consultation requests</field>
+            <field name="model_id" ref="model_medical_consultation_request"/>
+            <field name="domain_force">[('nurse_id.user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('hospital.group_nurse'))]"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="medical_consultation_request_rule_doctor" model="ir.rule">
+            <field name="name">Doctor: no access to consultation requests</field>
+            <field name="model_id" ref="model_medical_consultation_request"/>
+            <field name="domain_force">[(0, '=', 1)]</field> <!-- domaine vide -->
+            <field name="groups" eval="[(4, ref('hospital.group_doctor'))]"/>
+            <field name="perm_read" eval="1"/> <!-- DOIT avoir au moins un True -->
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+    </data>
+</odoo>
