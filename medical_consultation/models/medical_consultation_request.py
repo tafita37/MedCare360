@@ -17,6 +17,11 @@ class MedicalConsultationRequest(models.Model):
         string='Symptoms',
         required=True
     )    
+    consultation_ids = fields.One2many(
+        'medical.consultation.consultation',
+        'request_id',
+        string='Consultations'
+    )
 
     @api.model
     def _get_default_patient(self):
@@ -45,6 +50,19 @@ class MedicalConsultationRequest(models.Model):
             'name': 'Affectation',
             'type': 'ir.actions.act_window',
             'res_model': 'medical.consultation.affectation.nurse.wizard',
+            'view_mode': 'form',
+            'target': 'new',  
+            'context': {
+                'default_request_id': self.id,
+            },
+        }
+
+    def open_affectation_doctor_wizard(self):
+        self.ensure_one()
+        return {
+            'name': 'Affectation',
+            'type': 'ir.actions.act_window',
+            'res_model': 'medical.consultation.affectation.doctor.wizard',
             'view_mode': 'form',
             'target': 'new',  
             'context': {
