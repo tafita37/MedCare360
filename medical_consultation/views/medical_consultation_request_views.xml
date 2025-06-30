@@ -5,8 +5,8 @@
         <field name="arch" type="xml">
             <list string="Request">
                 <field name="name"/>
-                <field name="nurse_id"/>
-                <field name="patient_id"/>
+                <field name="nurse_id" groups="!hospital.group_nurse"/>
+                <field name="patient_id" groups="!hospital.group_patient"/>
                 <button 
                     groups="base.group_system" 
                     name="open_affectation_wizard" 
@@ -15,6 +15,14 @@
                     class="btn-primary" 
                     icon="fa-user-plus"
                     invisible="nurse_id != False"
+                />
+                <button 
+                    name="open_affectation_doctor_wizard" 
+                    string="Assigner un médecin" 
+                    type="object" 
+                    class="btn-primary" 
+                    icon="fa-user-plus"
+                    invisible="nurse_id == False"
                 />
             </list>
         </field>

@@ -1,6 +1,6 @@
 from odoo import models, fields
 
-class MedicalConsultationConsultation(models.Model):
+class Consultation(models.Model):
     _name = 'medical.consultation.consultation'
     _description = 'Medical Consultation Consultation'
 
