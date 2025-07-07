@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import models, fields
 
 class AffectationDoctorWizard(models.TransientModel):
     _name = 'medical.consultation.affectation.doctor.wizard'

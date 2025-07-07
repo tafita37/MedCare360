@@ -1,5 +1,6 @@
 {
   "python.analysis.extraPaths": [
     "D:/odoo/server"
-  ]
+  ],
+  "python.languageServer": "None"
 }
