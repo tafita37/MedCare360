@@ -51,11 +51,15 @@ class MedicalConsultationRequest(models.Model):
             'type': 'ir.actions.act_window',
             'res_model': 'medical.consultation.affectation.nurse.wizard',
             'view_mode': 'form',
-            'target': 'new',  
+            'view_id': self.env.ref(
+                'medical_consultation.view_affectation_wizard_nurse_form'
+            ).id,
+            'target': 'new',
             'context': {
                 'default_request_id': self.id,
             },
         }
+
 
     def open_affectation_doctor_wizard(self):
         self.ensure_one()
@@ -71,10 +75,10 @@ class MedicalConsultationRequest(models.Model):
         }
 
     @api.model
-    def search(self, args, offset=0, limit=None, order=None, count=False):
+    def search(self, args, offset=0, limit=None, order=None):
         user = self.env.user
         if self.env.is_superuser():
-            return super().search(args, offset=offset, limit=limit, order=order, count=count)
+            return super().search(args, offset=offset, limit=limit, order=order)
         # Si l'utilisateur est infirmier
         if user.has_group('hospital.group_nurse'):
             nurse = self.env['hospital.nurse'].search([('user_id', '=', user.id)], limit=1)
@@ -89,4 +93,4 @@ class MedicalConsultationRequest(models.Model):
                 args = args + [('patient_id', '=', patient.id)]
             else:
                 args = args + [('patient_id', '=', False)]  # Aucun résultat si pas de patient lié
-        return super().search(args, offset=offset, limit=limit, order=order, count=count)
+        return super().search(args, offset=offset, limit=limit, order=order)

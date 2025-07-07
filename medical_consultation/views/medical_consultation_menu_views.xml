@@ -7,8 +7,14 @@
             sequence="10"
         />
         <menuitem 
-            id="medical_consultation_menu_partner_list" 
+            id="medical_consultation_menu_consultation_list" 
+            name="consultation" 
+            action="action_medical_consultation_consultation"
             sequence="20"
+        />
+        <menuitem 
+            id="medical_consultation_menu_partner_list" 
+            sequence="30"
             name="Employees" 
         >
             <menuitem 
