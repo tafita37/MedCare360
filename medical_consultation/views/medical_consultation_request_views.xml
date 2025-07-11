@@ -17,12 +17,13 @@
                     invisible="nurse_id != False"
                 />
                 <button 
+                    groups="hospital.group_nurse" 
                     name="open_affectation_doctor_wizard" 
                     string="Assigner un médecin" 
                     type="object" 
                     class="btn-primary" 
                     icon="fa-user-plus"
-                    invisible="nurse_id == False"
+                    invisible="nurse_id == False or consultation_ids"
                 />
             </list>
         </field>

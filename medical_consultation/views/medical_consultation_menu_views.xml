@@ -8,7 +8,7 @@
         />
         <menuitem 
             id="medical_consultation_menu_consultation_list" 
-            name="consultation" 
+            name="Consultation" 
             action="action_medical_consultation_consultation"
             sequence="20"
         />
