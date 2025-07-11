@@ -2,7 +2,7 @@ from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 from odoo import SUPERUSER_ID
 
-class MedicalConsultationRequest(models.Model):
+class Request(models.Model):
     _name = 'medical.consultation.request'
     _description = 'Hospital Consultation Request'
 
@@ -37,7 +37,7 @@ class MedicalConsultationRequest(models.Model):
     @api.model
     def create(self, vals):
         # Call super to create the record and get the ID
-        record = super(MedicalConsultationRequest, self).create(vals)
+        record = super(Request, self).create(vals)
         # Set the name as "Fiche numéro <id>"
         record.name = "Fiche numéro %s" % record.id
         if record.request_detail_ids is None or len(record.request_detail_ids)==0 :

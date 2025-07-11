@@ -1,6 +1,18 @@
 <odoo>
+    <record id="list_medical_consultation_consultation" model="ir.ui.view">
+        <field name="name">medical.consultation.consultation.list</field>
+        <field name="model">medical.consultation.consultation</field>
+        <field name="arch" type="xml">
+            <list string="Request">
+                <field name="name"/>
+                <field name="doctor_id"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
     <record id="action_medical_consultation_consultation" model="ir.actions.act_window">
-        <field name="name">consultation</field>
+        <field name="name">Consultation</field>
         <field name="res_model">medical.consultation.consultation</field>
         <field name="view_mode">list,form</field>
         <field name="help" type="html">
